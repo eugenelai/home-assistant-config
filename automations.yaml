@@ -1,0 +1,98 @@
+- id: PorchLightOn
+  alias: Turn On Front Porch Light At Dusk
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -00:15:00
+  action:
+  - service: homeassistant.turn_on
+    entity_id: light.front_porch
+  - service: notify.Pushbullet
+    data:
+      message: "Porch light turned on."
+
+- id: PorchLightOff
+  alias: Turn Off Front Porch Light At Dawn
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: +00:15:00
+  action:
+  - service: homeassistant.turn_off
+    entity_id: light.front_porch
+  - service: notify.Pushbullet
+    data:
+      message: "Porch light turned on."
+
+- id: deskon
+  alias: Turn On Desk When I get Home
+  trigger:
+  - platform: state
+    entity_id: device_tracker.brian_v30
+    from: not_home
+    to: home
+  action:
+  - service: homeassistant.turn_on
+    entity_id: light.desk
+
+- id: deskoff
+  alias: Turn Off Desk When I Leave
+  trigger:
+  - platform: state
+    entity_id: device_tracker.brian_v30
+    from: home
+    to: not_home
+  action:
+  - service: homeassistant.turn_off
+    entity_id: light.desk
+
+- id: jenniferhome
+  alias: Announce When Jennifer Comes Home
+  trigger:
+  - platform: state
+    entity_id: device_tracker.jennifer_stylo3plus
+    from: home
+    to: not_home
+  action:
+  - service: tts.google_say
+    entity_id: media_player.home_group
+    data:
+      message: "Jennifer is home"
+
+- id: startpushbullet
+  alias: HASS Restart Notification Via Pushbullet
+  trigger:
+  - platform: homeassistant
+    event: start
+  action:
+  - service: notify.pushbullet
+    data:
+      message: "Home assistant restarted"
+
+- id: updateavailablenotification
+  alias: 'Update Available Notifications'
+  trigger:
+  - platform: state
+    entity_id: updater.updater
+  action:
+  - service: notify.pushbullet
+    data:
+      message: 'Update for Home Assistant is available.'
+
+- alias: System - Clear TTS Cache
+  trigger:
+    platform: time
+    hours: '/24'
+  condition:
+    - condition: time
+      weekday:
+        - mon
+  action:
+    service: tts.clear_cache
+
+- alias: Heal Network
+  trigger:
+    platform: time
+    at: '05:00:00'
+  action:
+    - service: zwave.heal_network

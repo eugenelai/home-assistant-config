@@ -1,0 +1,166 @@
+Default_view:
+ name: Home
+ icon: mdi:home-assistant
+ view: yes
+ entities:
+   # - device_tracker.brian_v30
+   # - device_tracker.jennifer_stylo3plus
+   - group.Presence
+   - group.living_room
+   - group.kitchen
+   - group.rooms
+#   - group.outside
+   - group.switches
+   - group.garage
+   - group.travel_time
+   - configurator.philips_hue
+   - configurator.ecobee
+   - updater.updater
+   - persistent_notification.invalid_config
+
+# cameras:
+#  name: Cams
+#  icon: mdi:cctv
+#  view: yes
+#  entities:
+#    - group.cams
+
+media_players:
+  name: Media Players
+  icon: mdi:television
+  view: yes
+  entities:
+    - group.media
+
+wx:
+ name: Weather
+ icon: mdi:weather-partlycloudy
+ view: yes
+ entities:
+   - group.weather
+   - group.wx
+   - group.allergy_index
+   - camera.weather_radar
+
+climate_control:
+ name: Climate Control
+ icon: mdi:air-conditioner
+ view: yes
+ entities:
+   - group.climate
+
+status:
+ name: Status
+ icon: mdi:laptop
+ view: yes
+ entities:
+   - group.system
+   - group.devices
+   - group.connection
+
+auto:
+ name: Automations
+ icon: mdi:autorenew
+ view: yes
+ entities:
+   - group.automations
+
+Living Room:
+  - light.living_room
+  - light.tv
+  - light.mantle
+  - light.desk
+
+Kitchen:
+  - light.kitchen
+
+Rooms:
+  - light.bedroom
+  - light.office
+  - light.my_room
+  - light.cowboys
+
+Outside:
+  - light.front_porch
+
+Switches:
+  - switch.fan
+  - script.thermostatfan
+
+Presence:
+   - device_tracker.brian_v30
+   - sensor.battery_brian_v30
+   - device_tracker.jennifer_stylo3plus
+   - sensor.battery_jennifer_stylo3plus
+
+Garage:
+  - camera.garage
+  - script.garagedoor
+
+Cams:
+  - camera.living_room
+
+Climate:
+  - climate.thermostat
+  - sensor.thermostat_temperature
+  - sensor.thermostat_humidity
+  - sensor.kitchen_temperature
+  - binary_sensor.thermostat_occupancy
+  - binary_sensor.kitchen_occupancy
+  - history_graph.temperature
+
+Weather:
+  - sensor.dark_sky_temperature
+  - sensor.dark_sky_apparent_temperature
+  - sensor.dark_sky_daily_high_temperature
+  - sensor.dark_sky_daily_low_temperature
+  - sensor.dark_sky_humidity
+  - sensor.dark_sky_wind_speed
+  - sensor.wind_dir
+
+Allergy Index:
+  - sensor.forecasted_allergy_index
+  - sensor.allergy_index_today
+  - sensor.allergy_index_tomorrow
+
+System:
+  - sensor.hass_current_version
+  - sensor.processor_use
+  - sensor.memory_use
+  - sensor.memory_free
+  - sensor.since_last_boot_templated
+  - sensor.ssl_certificate_expiry
+
+Devices:
+  - sensor.amplifi
+  - sensor.ikonixx
+  - sensor.nicks_phone
+  - sensor.alberts_phone
+  - sensor.elenas_phone
+
+Travel Time:
+  - sensor.brian__home
+  - sensor.brian__work
+  - sensor.jennifer__home
+  - sensor.jennifer__work
+
+Connection:
+  - sensor.speedtest_download
+  - sensor.speedtest_upload
+  - sensor.speedtest_ping
+  - sensor.external_ip
+  - script.updatespeedtest
+
+Media:
+  - media_player.roku_yn00ud954225
+  - media_player.living_room
+  - media_player.roku_yu005y230901
+
+Automations:
+  - automation.hass_restart_notification_via_pushbullet
+  - automation.announce_when_jennifer_comes_home
+  - automation.update_available_notifications
+  - automation.turn_off_front_porch_light_at_dawn
+  - automation.turn_on_front_porch_light_at_dusk
+  - automation.turn_on_desk_when_i_get_home
+  - automation.turn_off_desk_when_i_leave

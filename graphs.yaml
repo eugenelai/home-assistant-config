@@ -1,0 +1,6 @@
+temperature:
+  name: Temperature
+  entities:
+    - climate.thermostat
+  hours_to_show: 48
+  refresh: 60

@@ -1,0 +1,9 @@
+include:
+  domains:
+    - light
+    - climate
+    - binary_sensor
+  entities:
+    - switch.Fan
+    - device_tracker.brian_v30
+    - device_tracker.jennifer_stylo3plus

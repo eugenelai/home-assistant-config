@@ -1,0 +1,137 @@
+sensor.forecasted_allergy_index:
+  icon: mdi:flower
+
+sensor.allergy_index_today:
+  icon: mdi:flower
+
+sensor.allergy_index_tomorrow:
+  icon: mdi:flower
+
+sensor.battery_brian_v30:
+  friendly_name: Brian
+
+sensor.battery_jennifer_stylo3plus:
+  friendly_name: Jennifer
+
+climate.thermostat:
+  entity_picture: /local/ecobee.png
+
+sensor.amplifi:
+  icon: mdi:wifi
+  friendly_name: Amplifi HD
+
+sensor.ikonixx:
+  icon: mdi:monitor
+  friendly_name: iKonixx
+
+sensor.nicks_phone:
+  icon: mdi:cellphone
+  friendly_name: Nick's Phone
+
+sensor.alberts_phone:
+  icon: mdi:cellphone
+  friendly_name: Albert's Phone
+
+sensor.elenas_phone:
+  icon: mdi:cellphone
+  friendly_name: Elena's Phone
+
+sensor.hass_current_version:
+  icon: mdi:home-assistant
+
+sensor.external_ip:
+  icon: mdi:lan
+  friendly_name: External IP
+
+sensor.brian__home:
+  icon: mdi:car
+
+sensor.brian__work:
+  icon: mdi:car
+
+sensor.jennifer__home:
+  icon: mdi:car
+
+sensor.jennifer__work:
+  icon: mdi:car
+
+script.thermostatfan:
+  icon: mdi:fan
+  friendly_name: Bathroon Fan
+
+switch.fan:
+  icon: mdi:fan
+  friendly_name: Bedroom Fan
+
+script.garagedoor:
+  icon: mdi:garage
+  friendly_name: Garage Door
+  can_cancel: false
+
+script.updatespeedtest:
+  icon: mdi:refresh
+  Friendly name: Update
+
+sensor.speedtest_download:
+  icon: mdi:download
+  friendly_name: Download
+
+sensor.speedtest_upload:
+  icon: mdi:upload
+  friendly_name: Upload
+
+sensor.speedtest_ping:
+  friendly_name: Ping
+
+sensor.dark_sky_temperature:
+  icon: mdi:thermometer
+  friendly_name: Temperature
+
+sensor.dark_sky_apparent_temperature:
+  icon: mdi:thermometer
+  friendly_name: Apparent Temperature
+
+sensor.dark_sky_daily_high_temperature:
+  icon: mdi:thermometer
+  friendly_name: Today's High Temperature
+
+sensor.dark_sky_daily_low_temperature:
+  icon: mdi:thermometer
+  friendly_name: Today's Low Temperature
+
+sensor.dark_sky_humidity:
+  icon: mdi:water
+  friendly_name: Humidity
+
+sensor.dark_sky_wind_speed:
+  icon: mdi:weather-windy
+  friendly_name: Wind Speed
+
+sensor.wind_dir:
+  icon: mdi:compass
+  friendly_name: Wind Direction
+
+sensor.thermostat_humidity:
+  icon: mdi:water
+
+sensor.since_last_boot_templated:
+  icon: mdi:timer
+  friendly_name: Uptime
+
+media_player.living_room:
+  friendly_name: Living Room Chromecast
+
+media_player.roku_yn00ud954225:
+  friendly_name: Living Room Roku
+
+media_player.roku_yu005y230901:
+  friendly_name: Bedroom Roku
+
+light.my_room:
+  friendly_name: Elena's Room
+
+light.bedroom:
+  friendly_name: Master Bedroom
+
+light.cowboys:
+  friendly_name: Cowboys Room
