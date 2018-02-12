@@ -1,4 +1,4 @@
-![Home Assistant](https://github.com/ikonixx/home-assistant/blob/master/images/hass.png)
+![Home Assistant](https://github.com/ikonixx/home-assistant-config/blob/master/images/hass.png)
 # Home Assistant
 
 My [Home Assistant](https://home-assistant.io/) configuration running on a Rasperry Pi 3 with the following devices.
