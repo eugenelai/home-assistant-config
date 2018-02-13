@@ -9,7 +9,7 @@ Default_view:
    - group.living_room
    - group.kitchen
    - group.rooms
-#   - group.outside
+   - group.outside
    - group.switches
    - group.garage
    - group.travel_time
@@ -18,12 +18,12 @@ Default_view:
    - updater.updater
    - persistent_notification.invalid_config
 
-# cameras:
-#  name: Cams
-#  icon: mdi:cctv
-#  view: yes
-#  entities:
-#    - group.cams
+cameras:
+ name: Cams
+ icon: mdi:cctv
+ view: yes
+ entities:
+   - group.cams
 
 media_players:
   name: Media Players
@@ -94,8 +94,7 @@ Presence:
    - sensor.battery_jennifer_stylo3plus
 
 Garage:
-  - camera.garage
-  - script.garagedoor
+  - cover.garagedoor
 
 Cams:
   - camera.living_room

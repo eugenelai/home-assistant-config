@@ -64,6 +64,37 @@ sun:
 tts:
   platform: google
 
+panel_iframe:
+  ide:
+    title: IDE
+    icon: mdi:code-braces
+    url: !secret ide_url
+
+cover:
+  - platform: template
+    covers:
+      garagedoor:
+        friendly_name: "Garage Door"
+        open_cover:
+          service: script.garagedoor
+          data:
+            modus: 'open'
+        close_cover:
+          service: script.garagedoor
+          data:
+            modus: 'close'
+        # stop_cover:
+        #   service: script.garagedoor
+        #   data:
+        #     modus: 'stop'
+        value_template: "{{is_state('sensor.garagedoor', 'open')}}"
+        icon_template: >-
+          {% if is_state('sensor.garagedoor', 'open') %}
+            mdi:garage-open
+          {% else %}
+            mdi:garage
+          {% endif %}
+
 zwave:
   usb_path: /dev/ttyACM0
 
@@ -79,7 +110,7 @@ hue:
 
 android_ip_webcam:
   - host: 192.168.0.5
-    name: Garage
+    name: Living Room
     scan_interval: 5
 
 camera:

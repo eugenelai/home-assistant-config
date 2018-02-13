@@ -51,11 +51,11 @@
     allergy_index_today:
       friendly_name: 'Allergy Index Today'
       value_template: >
-        {% if states.sensor.allergy_index_today.state|float <= 2.4 %}Low
-        {% elif states.sensor.allergy_index_today.state|float <= 4.8 %}Low-Medium
-        {% elif states.sensor.allergy_index_today.state|float <= 7.2 %}Medium
-        {% elif states.sensor.allergy_index_today.state|float <= 9.6 %}Medium-High
-        {% elif states.sensor.allergy_index_today.state|float <= 12.0 %}High
+        {% if states.sensor.allergy_index_today_2.state|float <= 2.4 %}Low
+        {% elif states.sensor.allergy_index_today_2.state|float <= 4.8 %}Low-Medium
+        {% elif states.sensor.allergy_index_today_2.state|float <= 7.2 %}Medium
+        {% elif states.sensor.allergy_index_today_2.state|float <= 9.6 %}Medium-High
+        {% elif states.sensor.allergy_index_today_2.state|float <= 12.0 %}High
         {% else %}Unknown
         {% endif %}
 
@@ -64,11 +64,11 @@
     allergy_index_tomorrow:
       friendly_name: 'Allergy Index Tomorrow'
       value_template: >
-        {% if states.sensor.allergy_index_tomorrow.state|float <= 2.4 %}Low
-        {% elif states.sensor.allergy_index_tomorrow.state|float <= 4.8 %}Low-Medium
-        {% elif states.sensor.allergy_index_tomorrow.state|float <= 7.2 %}Medium
-        {% elif states.sensor.allergy_index_tomorrow.state|float <= 9.6 %}Medium-High
-        {% elif states.sensor.allergy_index_tomorrow.state|float <= 12.0 %}High
+        {% if states.sensor.allergy_index_tomorrow_2.state|float <= 2.4 %}Low
+        {% elif states.sensor.allergy_index_tomorrow_2.state|float <= 4.8 %}Low-Medium
+        {% elif states.sensor.allergy_index_tomorrow_2.state|float <= 7.2 %}Medium
+        {% elif states.sensor.allergy_index_tomorrow_2.state|float <= 9.6 %}Medium-High
+        {% elif states.sensor.allergy_index_tomorrow_2.state|float <= 12.0 %}High
         {% else %}Unknown
         {% endif %}
 

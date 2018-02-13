@@ -1,0 +1,45 @@
+light.tv:
+  platform: hue
+  unique_id: 00:17:88:01:00:c5:cc:56-0b
+light.office:
+  platform: hue
+  unique_id: 00:17:88:01:03:01:7c:f3-0b
+light.end_table:
+  platform: hue
+  unique_id: 00:17:88:01:10:2f:50:79-0b
+light.kitchen_1:
+  platform: hue
+  unique_id: 00:17:88:01:02:ff:a0:32-0b
+light.master_bedroom_ceiling_fan_1:
+  platform: hue
+  unique_id: 00:17:88:01:03:44:26:31-0b
+light.cowboys:
+  platform: hue
+  unique_id: 00:17:88:01:02:8f:17:fa-0b
+light.desk:
+  platform: hue
+  unique_id: 00:17:88:01:00:ec:2c:6f-0b
+light.master_bedroom_ceiling_fan_2:
+  platform: hue
+  unique_id: 00:17:88:01:03:69:53:d9-0b
+light.living_room_ceiling_fan_3:
+  platform: hue
+  unique_id: 00:17:88:01:10:29:9d:6e-0b
+light.living_room_ceiling_fan_2:
+  platform: hue
+  unique_id: 00:17:88:01:10:2f:2c:42-0b
+light.my_room_2:
+  platform: hue
+  unique_id: 00:17:88:01:02:8c:2c:80-0b
+light.living_room_ceiling_fan_1:
+  platform: hue
+  unique_id: 00:17:88:01:10:2d:8c:ae-0b
+light.kitchen_2:
+  platform: hue
+  unique_id: 00:17:88:01:03:6a:e4:da-0b
+light.front_porch_2:
+  platform: hue
+  unique_id: 00:17:88:01:10:46:b1:fc-0b
+light.mantle_2:
+  platform: hue
+  unique_id: 00:17:88:01:02:af:91:7b-0b
