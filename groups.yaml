@@ -60,7 +60,7 @@ status:
 
 auto:
  name: Automations
- icon: mdi:autorenew
+ icon: mdi:settings
  view: yes
  entities:
    - group.automations
@@ -129,10 +129,13 @@ System:
   - sensor.memory_free
   - sensor.since_last_boot_templated
   - sensor.ssl_certificate_expiry
+  - sensor.external_ip
 
 Devices:
   - sensor.amplifi
   - sensor.ikonixx
+  - sensor.brians_phone
+  - sensor.jennifers_phone
   - sensor.nicks_phone
   - sensor.alberts_phone
   - sensor.elenas_phone
@@ -143,12 +146,12 @@ Travel Time:
   - sensor.jennifer__home
   - sensor.jennifer__work
 
-Connection:
-  - sensor.speedtest_download
-  - sensor.speedtest_upload
-  - sensor.speedtest_ping
-  - sensor.external_ip
-  - script.updatespeedtest
+# Connection:
+#   - sensor.speedtest_download
+#   - sensor.speedtest_upload
+#   - sensor.speedtest_ping
+#   - sensor.external_ip
+#   - script.updatespeedtest
 
 Media:
   - media_player.roku_yn00ud954225

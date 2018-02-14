@@ -111,15 +111,15 @@
     - type: memory_free
     - type: since_last_boot
 
-- platform: speedtest
-  server_id: 13682
-  minute:
-    - 0
-    - 30
-  monitored_conditions:
-    - download
-    - upload
-    - ping
+# - platform: speedtest
+#   server_id: 13682
+#   minute:
+#     - 0
+#     - 30
+#   monitored_conditions:
+#     - download
+#     - upload
+#     - ping
 
 - platform: template
   sensors:
@@ -154,11 +154,11 @@
   origin: device_tracker.brian_v30
   destination: !secret home
 
-- platform: google_travel_time
-  api_key: !secret google_travel_time_api_key
-  name: Brian - Work
-  origin: device_tracker.brian_v30
-  destination: !secret brian_work
+# - platform: google_travel_time
+#   api_key: !secret google_travel_time_api_key
+#   name: Brian - Work
+#   origin: device_tracker.brian_v30
+#   destination: !secret brian_work
 
 - platform: google_travel_time
   api_key: !secret google_travel_time_api_key
@@ -166,11 +166,11 @@
   origin: device_tracker.jennifer_stylo3plus
   destination: !secret home
 
-- platform: google_travel_time
-  api_key: !secret google_travel_time_api_key
-  name: Jennifer - Work
-  origin: device_tracker.jennifer_stylo3plus
-  destination: !secret jennifer_work
+# - platform: google_travel_time
+#   api_key: !secret google_travel_time_api_key
+#   name: Jennifer - Work
+#   origin: device_tracker.jennifer_stylo3plus
+#   destination: !secret jennifer_work
 
 - platform: template
   sensors:
@@ -181,6 +181,16 @@
   sensors:
     ikonixx:
       value_template: "{% if is_state('device_tracker.ikonixx', 'home') %}Online{% else %}Offline{% endif %}"
+
+- platform: template
+  sensors:
+    brians_phone:
+      value_template: "{% if is_state('device_tracker.brians_phone', 'home') %}Online{% else %}Offline{% endif %}"
+
+- platform: template
+  sensors:
+    jennifers_phone:
+      value_template: "{% if is_state('device_tracker.jennifers_phone', 'home') %}Online{% else %}Offline{% endif %}"
 
 - platform: template
   sensors:

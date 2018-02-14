@@ -1,0 +1,81 @@
+
+brian_v30:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Brian
+  picture: /local/brian.jpg
+  track: true
+  vendor:
+
+jennifer_stylo3plus:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Jennifer
+  picture: /local/jen.jpg
+  track: true
+  vendor:
+
+ikonixx:
+  hide_if_away: false
+  icon:
+  mac: BT_B0:C0:90:9E:51:B9
+  name: IKONIXX
+  picture:
+  track: true
+  vendor: Chicony Electronics Co., Ltd.
+
+amplifi:
+  hide_if_away: false
+  icon:
+  mac:
+  name: amplifi
+  picture:
+  track: true
+  vendor:
+
+nicks_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: nicks phone
+  picture:
+  track: true
+  vendor:
+
+alberts_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: alberts phone
+  picture:
+  track: true
+  vendor:
+
+elenas_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: elenas phone
+  picture:
+  track: true
+  vendor:
+
+brians_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: brians phone
+  picture:
+  track: true
+  vendor:
+
+jennifers_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: jennifers phone
+  picture:
+  track: true
+  vendor:
