@@ -1,0 +1,9 @@
+ide:
+  title: 'IDE'
+  icon: 'mdi:code-braces'
+  url: !secret ide_url
+
+terminal:
+  title: 'Terminal'
+  icon: 'mdi:console'
+  url: !secret terminal_url

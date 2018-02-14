@@ -64,12 +64,6 @@ sun:
 tts:
   platform: google
 
-panel_iframe:
-  ide:
-    title: IDE
-    icon: mdi:code-braces
-    url: !secret ide_url
-
 cover:
   - platform: template
     covers:
@@ -125,6 +119,7 @@ switch: !include switches.yaml
 sensor: !include sensors.yaml
 script: !include scripts.yaml
 group: !include groups.yaml
+panel_iframe: !include iframes.yaml
 automation: !include automations.yaml
 history_graph: !include graphs.yaml
 device_tracker: !include device_trackers.yaml
