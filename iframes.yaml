@@ -1,7 +1,7 @@
-ide:
-  title: 'IDE'
+configurator:
+  title: 'Configurator'
   icon: 'mdi:code-braces'
-  url: !secret ide_url
+  url: !secret configurator_url
 
 terminal:
   title: 'Terminal'

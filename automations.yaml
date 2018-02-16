@@ -9,7 +9,7 @@
     entity_id: light.front_porch
   - service: notify.Pushbullet
     data:
-      message: "Porch light turned on."
+      message: "Porch light turned on"
 
 - id: PorchLightOff
   alias: Turn Off Front Porch Light At Dawn
@@ -22,7 +22,7 @@
     entity_id: light.front_porch
   - service: notify.Pushbullet
     data:
-      message: "Porch light turned on."
+      message: "Porch light turned off"
 
 - id: deskon
   alias: Turn On Desk When I get Home
@@ -51,8 +51,8 @@
   trigger:
   - platform: state
     entity_id: device_tracker.jennifer_stylo3plus
-    from: home
-    to: not_home
+    from: not_home
+    to: home
   action:
   - service: tts.google_say
     entity_id: media_player.home_group

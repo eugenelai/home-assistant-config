@@ -3,8 +3,6 @@ Default_view:
  icon: mdi:home-assistant
  view: yes
  entities:
-   # - device_tracker.brian_v30
-   # - device_tracker.jennifer_stylo3plus
    - group.Presence
    - group.living_room
    - group.kitchen
@@ -56,7 +54,7 @@ status:
  entities:
    - group.system
    - group.devices
-   - group.connection
+   - group.batteries
 
 auto:
  name: Automations
@@ -95,6 +93,7 @@ Presence:
 
 Garage:
   - cover.garagedoor
+  - sensor.garage_door_battery
 
 Cams:
   - camera.living_room
@@ -152,6 +151,9 @@ Travel Time:
 #   - sensor.speedtest_ping
 #   - sensor.external_ip
 #   - script.updatespeedtest
+
+Batteries:
+  - sensor.garage_door_battery
 
 Media:
   - media_player.roku_yn00ud954225

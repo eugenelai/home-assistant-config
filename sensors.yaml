@@ -104,6 +104,18 @@
           mdi:battery-alert
         {% endif %}
 
+- platform: template
+  sensors:
+    garage_door_battery:
+      value_template: >-
+        {%- if states.zwave.garage_door -%}
+          {{ states.zwave.garage_door.attributes.battery_level }}
+        {%- else -%}
+          n/a
+        {%- endif -%}
+      unit_of_measurement: '%'
+      entity_id: zwave.garage_door
+
 - platform: systemmonitor
   resources:
     - type: processor_use

@@ -1,3 +1,7 @@
+sensor.garage_door_battery:
+  friendly_name: Garage Door Battery
+  icon: mdi:battery
+
 sensor.forecasted_allergy_index:
   icon: mdi:flower
 
