@@ -3,6 +3,8 @@ include:
     - light
     - climate
     - binary_sensor
+    - automation
+    - script
   entities:
     - switch.Fan
     - device_tracker.brian_v30

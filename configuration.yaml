@@ -103,18 +103,12 @@ hue:
     - host: 192.168.0.2
 
 android_ip_webcam:
-  - host: 192.168.0.5
-    name: Living Room
+  - host: 192.168.0.6
+    name: Other Room
     scan_interval: 5
 
-camera:
-- platform: generic
-  name: Weather Radar
-  content_type: image/gif
-  still_image_url: http://cdn.tegna-media.com/wfaa/weather/animated-loops/comp/880x495/new_dma.gif
-    #https://radar.weather.gov/ridge/lite/N0R/FWS_loop.gif
-
 alert: !include alerts.yaml
+camera: !include cameras.yaml
 notify: !include notify.yaml
 switch: !include switches.yaml
 sensor: !include sensors.yaml

@@ -109,3 +109,29 @@
     at: '05:00:00'
   action:
     - service: zwave.heal_network
+
+- id: garagedooropen
+  alias: Announce When Garage Door Is Opened
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.sensor
+    from: "off"
+    to: "on"
+  action:
+  - service: tts.google_say
+    data:
+      entity_id: media_player.home_group
+      message: "garage door opened"
+
+- id: garagedoorclosed
+  alias: Announce When Garage Door Is Closed
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.sensor
+    from: "on"
+    to: "off"
+  action:
+  - service: tts.google_say
+    data:
+      entity_id: media_player.home_group
+      message: "garage door closed"

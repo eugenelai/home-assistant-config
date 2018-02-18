@@ -1,10 +1,10 @@
 garage_door:
     name: Garage Is Open
-    done_message: Garage is closed
-    entity_id: binary_sensor.sensor_2
+    done_message: Garage Is Closed
+    entity_id: binary_sensor.sensor
     state: 'on'
     repeat: 5
     can_acknowledge: True
-    skip_first: False
+    skip_first: True
     notifiers:
       - pushbullet

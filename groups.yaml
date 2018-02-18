@@ -17,7 +17,7 @@ Default_view:
    - persistent_notification.invalid_config
 
 cameras:
- name: Cams
+ name: Cameras
  icon: mdi:cctv
  view: yes
  entities:
@@ -96,7 +96,10 @@ Garage:
   - sensor.garage_door_battery
 
 Cams:
+  - camera.dining_room
   - camera.living_room
+  - camera.living_room_2
+
 
 Climate:
   - climate.thermostat
@@ -161,8 +164,10 @@ Media:
   - media_player.roku_yu005y230901
 
 Automations:
-  - automation.hass_restart_notification_via_pushbullet
+  - automation.announce_when_garage_door_is_opened
+  - automation.announce_when_garage_door_is_closed
   - automation.announce_when_jennifer_comes_home
+  - automation.hass_restart_notification_via_pushbullet
   - automation.update_available_notifications
   - automation.turn_off_front_porch_light_at_dawn
   - automation.turn_on_front_porch_light_at_dusk
