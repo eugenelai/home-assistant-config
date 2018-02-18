@@ -1,9 +1,0 @@
-sensor.vision_zg8101_garage_door_detector_sourcenodeid:
-  ignored: false
-  polling_intensity: 0
-binary_sensor.sensor_2:
-  ignored: false
-  polling_intensity: 0
-sensor.vision_zg8101_garage_door_detector_sourcenodeid_2:
-  ignored: false
-  polling_intensity: 0
