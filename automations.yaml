@@ -114,7 +114,7 @@
   alias: Announce When Garage Door Is Opened
   trigger:
   - platform: state
-    entity_id: binary_sensor.sensor
+    entity_id: binary_sensor.garage_door
     from: "off"
     to: "on"
   action:
@@ -127,7 +127,7 @@
   alias: Announce When Garage Door Is Closed
   trigger:
   - platform: state
-    entity_id: binary_sensor.sensor
+    entity_id: binary_sensor.garage_door
     from: "on"
     to: "off"
   action:

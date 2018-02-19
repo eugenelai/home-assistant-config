@@ -43,7 +43,7 @@ light.front_porch_2:
 light.mantle_2:
   platform: hue
   unique_id: 00:17:88:01:02:af:91:7b-0b
-binary_sensor.sensor:
+binary_sensor.garage_door:
   platform: zwave
   unique_id: 5-72057594126794752
 sensor.alarm_type:

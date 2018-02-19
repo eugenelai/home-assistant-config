@@ -96,10 +96,8 @@ Garage:
   - sensor.garage_door_battery
 
 Cams:
-  - camera.dining_room
   - camera.living_room
-  - camera.living_room_2
-
+  - camera.garage
 
 Climate:
   - climate.thermostat
