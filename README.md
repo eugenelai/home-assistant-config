@@ -18,6 +18,7 @@ My [Home Assistant](https://home-assistant.io/) configuration running on a Raspe
   [Aeotec Z-Stick (Gen 5)](https://www.amazon.com/gp/product/B00X0AWA6E/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)  
   [Monoprice Z-Wave Garage Door Sensor](https://www.amazon.com/gp/product/B00V5IQ8E8/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1)  
   [Ecobee 3](https://www.ecobee.com/)  
-  [Owntracks](http://owntracks.org/) + [ibeacon](https://www.amazon.com/gp/product/B019G0VVZC/ref=oh_aui_detailpage_o03_s00?ie=UTF8&psc=1) for presence detection.
+  [Owntracks](http://owntracks.org/) + [ibeacon](https://www.amazon.com/gp/product/B019G0VVZC/ref=oh_aui_detailpage_o03_s00?ie=UTF8&psc=1) for presence detection.  
+  [Wansview IP Camera](https://www.amazon.com/gp/product/B077ZSPD26/ref=oh_aui_detailpage_o04_s00?ie=UTF8&psc=1)
   
   An old Android phone with [IP Webcam](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en) for a quick and dirty IP camera
