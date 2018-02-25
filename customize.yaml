@@ -1,3 +1,13 @@
+sensor.disk_use_percent_:
+  friendly_name: Disk Use
+  icon: mdi:harddisk
+
+sensor.memory_use_percent:
+  friendly_name: Memory Use
+
+sensor.processor_use:
+  friendly_name: Processor Use
+
 sensor.garage_door_battery:
   friendly_name: Garage Door Battery
   icon: mdi:battery

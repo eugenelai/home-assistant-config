@@ -11,6 +11,7 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: America/Chicago
   customize: !include customize.yaml
+  #packages: !include_dir_named packages
 
 # Show links to resources in log and frontend
 #introduction:
@@ -33,6 +34,8 @@ http:
   ssl_key: /ssl/privkey.pem
   # Uncomment this if you are using SSL or running in Docker etc
   base_url: !secret base_url
+  ip_ban_enabled: True
+  login_attempts_threshold: 5
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -83,14 +86,15 @@ android_ip_webcam:
     scan_interval: 5
 
 alert: !include alerts.yaml
+automation: !include automations.yaml
 camera: !include cameras.yaml
 cover: !include cover.yaml
-notify: !include notify.yaml
-switch: !include switches.yaml
-sensor: !include sensors.yaml
-script: !include scripts.yaml
-group: !include groups.yaml
-panel_iframe: !include iframes.yaml
-automation: !include automations.yaml
-history_graph: !include graphs.yaml
 device_tracker: !include device_trackers.yaml
+group: !include groups.yaml
+history_graph: !include graphs.yaml
+notify: !include notify.yaml
+script: !include scripts.yaml
+sensor: !include sensors.yaml
+switch: !include switches.yaml
+panel_iframe: !include iframes.yaml
+zone: !include zones.yaml

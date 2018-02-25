@@ -1,10 +1,10 @@
 garage_door:
-    name: Garage Is Open
-    done_message: Garage Is Closed
-    entity_id: binary_sensor.sensor
+    name: Alert! Garage has been open for 10 minutes!
+    done_message: Garage is closed.
+    entity_id: binary_sensor.garage_door
     state: 'on'
-    repeat: 5
+    repeat: 10
     can_acknowledge: True
     skip_first: True
     notifiers:
-      - pushbullet
+      - html5

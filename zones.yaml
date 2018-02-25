@@ -1,0 +1,11 @@
+- name: Brian's Work
+  latitude: 32.835013
+  longitude: -97.047641
+  radius: 250
+  icon: mdi:briefcase
+
+- name: Jennifer's Work
+  latitude: 32.835013
+  longitude: -97.047641
+  radius: 250
+  icon: mdi:briefcase

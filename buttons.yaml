@@ -1,0 +1,25 @@
+{
+  "buttons": [
+    {
+      "name": "ON - Bedroom",
+      "address": "18:74:2E:78:AD:5E",
+      "domain": "script",
+      "service": "goodnight",
+      "service_data": "{}"
+    },
+    {
+      "name": "ON - Bathroom",
+      "address": "78:E1:03:BF:2E:CB",
+      "domain": "script",
+      "service": "thermostatfan",
+      "service_data": "{}"
+    },
+    {
+      "name": "Happy Belly",
+      "address": "18:74:2E:C0:58:69",
+      "domain": "script",
+      "service": "dinnerisready",
+      "service_data": "{}"
+    }
+  ]
+}

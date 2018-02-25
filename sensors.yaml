@@ -119,19 +119,20 @@
 - platform: systemmonitor
   resources:
     - type: processor_use
-    - type: memory_use
-    - type: memory_free
+    - type: disk_use_percent
+      arg: /
+    - type: memory_use_percent
     - type: since_last_boot
 
-# - platform: speedtest
-#   server_id: 13682
-#   minute:
-#     - 0
-#     - 30
-#   monitored_conditions:
-#     - download
-#     - upload
-#     - ping
+- platform: speedtest
+  server_id: 13682
+  minute:
+    - 0
+    - 30
+  monitored_conditions:
+    - download
+    - upload
+    - ping
 
 - platform: template
   sensors:
