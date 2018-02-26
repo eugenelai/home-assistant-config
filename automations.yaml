@@ -121,7 +121,7 @@
   action:
     - service: zwave.heal_network
 
-- id: garagedooropen
+- id: garage_door_open
   alias: Announce when garage door is opened
   trigger:
   - platform: state
@@ -132,12 +132,11 @@
   - service: tts.google_say
     data:
       entity_id:
-      - media_player
-      - living_room_home
+      - media_player.living_room_home
       - media_player.kitchen_mini
       message: "garage door opened"
 
-- id: garagedoorclosed
+- id: garage_door_closed
   alias: Announce when garage door is closed
   trigger:
   - platform: state
@@ -172,3 +171,14 @@
   - service: hassio.addon_stdin
     data:
       {"addon":"7be23ff5_dropbox_sync","input":{"command":"upload"}}
+
+- id: restart_dasshio
+  alias: Restart Dasshio hourly
+  trigger:
+    - platform: time
+      minutes: 00
+      seconds: 00
+  action:
+    - service: hassio.addon_restart
+      data:
+        addon: 03d23610_dasshio

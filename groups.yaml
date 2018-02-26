@@ -177,6 +177,7 @@ Notifications:
 
 Automations:
   - automation.daily_backups
+  - automation.restart_dasshio_hourly
   - automation.turn_off_front_porch_light_at_dawn
   - automation.turn_on_front_porch_light_at_dusk
   - automation.turn_on_desk_light_when_brian_gets_home

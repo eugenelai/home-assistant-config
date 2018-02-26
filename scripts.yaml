@@ -4,6 +4,19 @@ thermostatfan:
   - service: ifttt.trigger
     data:
       event: thermostat_fan
+
+# thermostatfan:
+#   alias: Turn on thermostat fan
+#   sequence:
+#     - service: climate.set_fan_mode
+#       data:
+#         fan_mode: on
+#         entity_id: climate.thermostat
+#     - delay: "00:10:00"
+#     - service: climate.set_fan_mode
+#       data:
+#         fan_mode: auto
+
 garagedoor:
   alias: Garage Door
   sequence:
@@ -13,6 +26,7 @@ garagedoor:
       seconds: 1
   - service: switch.turn_off
     entity_id: switch.garage_door
+
 life360turnoff:
   alias: Life360 Turn Off lights
   sequence:
@@ -27,6 +41,7 @@ life360turnoff:
       - light.office
       - light.cowboys
       - light.my_room
+
 life360turnon:
   alias: Life360 Turn On lights
   sequence:
@@ -36,6 +51,7 @@ updatespeedtest:
   alias: Update
   sequence:
     - service: sensor.update_speedtest
+
 goodnight:
   alias: Good Night
   sequence:
@@ -50,6 +66,7 @@ goodnight:
       - light.office
   - service: switch.turn_on
     entity_id: switch.fan
+
 dinnerisready:
   alias: Dinner Is ready
   sequence:
