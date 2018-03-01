@@ -3,6 +3,8 @@ python:
   - "3.5"
 before_install:
   - mv travis_secrets.yaml secrets.yaml
+  - mv /ssl/fullchain.pem fullchain.pm
+  - mv /ssl/privkey.pem privkey.pem
 install:
   - pip3 install homeassistant
 script:
