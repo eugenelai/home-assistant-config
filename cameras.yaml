@@ -2,8 +2,8 @@
   name: Living Room
   input: !secret input
   extra_arguments: -pred 1
+
 - platform: generic
   name: Weather Radar
   content_type: image/gif
   still_image_url: http://cdn.tegna-media.com/wfaa/weather/animated-loops/comp/880x495/new_dma.gif
-  #https://radar.weather.gov/ridge/lite/N0R/FWS_loop.gif

@@ -1,5 +1,5 @@
 garage_door:
-    name: Alert! Garage has been open for 10 minutes!
+    name: Alert! Garage has been open for more than 10 minutes!
     done_message: Garage is closed.
     entity_id: binary_sensor.garage_door
     state: 'on'

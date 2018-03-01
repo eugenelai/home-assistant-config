@@ -1,72 +1,3 @@
-thermostatfan:
-  alias: Turn On Fart Fan
-  sequence:
-  - service: ifttt.trigger
-    data:
-      event: thermostat_fan
-
-# thermostatfan:
-#   alias: Turn on thermostat fan
-#   sequence:
-#     - service: climate.set_fan_mode
-#       data:
-#         fan_mode: on
-#         entity_id: climate.thermostat
-#     - delay: "00:10:00"
-#     - service: climate.set_fan_mode
-#       data:
-#         fan_mode: auto
-
-garagedoor:
-  alias: Garage Door
-  sequence:
-  - service: switch.turn_on
-    entity_id: switch.garage_door
-  - delay:
-      seconds: 1
-  - service: switch.turn_off
-    entity_id: switch.garage_door
-
-life360turnoff:
-  alias: Life360 Turn Off lights
-  sequence:
-  - service: light.turn_off
-    entity_id:
-      - light.desk
-      - light.living_room
-      - light.mantle
-      - light.tv
-      - light.kitchen
-      - light.bedroom
-      - light.office
-      - light.cowboys
-      - light.my_room
-
-life360turnon:
-  alias: Life360 Turn On lights
-  sequence:
-  - service: light.turn_on
-    entity_id: light.living_room
-updatespeedtest:
-  alias: Update
-  sequence:
-    - service: sensor.update_speedtest
-
-goodnight:
-  alias: Good Night
-  sequence:
-  - service: light.turn_off
-    entity_id:
-      - light.desk
-      - light.living_room
-      - light.mantle
-      - light.tv
-      - light.kitchen
-      - light.bedroom
-      - light.office
-  - service: switch.turn_on
-    entity_id: switch.fan
-
 dinnerisready:
   alias: Dinner Is ready
   sequence:
@@ -92,3 +23,73 @@ dinnerisready:
       - media_player.kitchen_mini
     data_template:
       volume_level: .75
+
+garagedoor:
+  alias: Garage Door
+  sequence:
+  - service: switch.turn_on
+    entity_id: switch.garage_door
+  - delay:
+      seconds: 1
+  - service: switch.turn_off
+    entity_id: switch.garage_door
+
+goodnight:
+  alias: Good Night
+  sequence:
+  - service: light.turn_off
+    entity_id:
+      - light.desk
+      - light.living_room
+      - light.mantle
+      - light.tv
+      - light.kitchen
+      - light.bedroom
+      - light.office
+  - service: switch.turn_on
+    entity_id: switch.fan
+
+life360turnoff:
+  alias: Life360 Turn Off lights
+  sequence:
+  - service: light.turn_off
+    entity_id:
+      - light.desk
+      - light.living_room
+      - light.mantle
+      - light.tv
+      - light.kitchen
+      - light.bedroom
+      - light.office
+      - light.cowboys
+      - light.my_room
+
+life360turnon:
+  alias: Life360 Turn On lights
+  sequence:
+  - service: light.turn_on
+    entity_id: light.living_room
+
+thermostatfan:
+  alias: Turn On Fart Fan
+  sequence:
+  - service: ifttt.trigger
+    data:
+      event: thermostat_fan
+
+# thermostatfan:
+#   alias: Turn on thermostat fan
+#   sequence:
+#     - service: climate.set_fan_mode
+#       data:
+#         fan_mode: on
+#         entity_id: climate.thermostat
+#     - delay: "00:10:00"
+#     - service: climate.set_fan_mode
+#       data:
+#         fan_mode: auto
+
+updatespeedtest:
+  alias: Update
+  sequence:
+    - service: sensor.update_speedtest

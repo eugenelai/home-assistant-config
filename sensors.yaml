@@ -1,3 +1,6 @@
+- platform: cert_expiry
+  host: !secret cert_expiry_host
+
 - platform: darksky
   api_key: !secret darksky_api_key
   monitored_conditions:
@@ -9,12 +12,59 @@
     - wind_speed
     - wind_bearing
 
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  name: Brian - Home
+  origin: device_tracker.brian_v30
+  destination: !secret home
+
+# - platform: google_travel_time
+#   api_key: !secret google_travel_time_api_key
+#   name: Brian - Work
+#   origin: device_tracker.brian_v30
+#   destination: !secret brian_work
+
+- platform: google_travel_time
+  api_key: !secret google_travel_time_api_key
+  name: Jennifer - Home
+  origin: device_tracker.jennifer_stylo3plus
+  destination: !secret home
+
+# - platform: google_travel_time
+#   api_key: !secret google_travel_time_api_key
+#   name: Jennifer - Work
+#   origin: device_tracker.jennifer_stylo3plus
+#   destination: !secret jennifer_work
+
 - platform: pollen
   zip_code: !secret zip_code
   monitored_conditions:
     - allergy_average_forecasted
     - allergy_index_today
     - allergy_index_tomorrow
+
+- platform: rest
+  resource: https://api.ipify.org/?format=json
+  name: External IP
+  value_template: '{{ value_json.ip }}'
+
+- platform: speedtest
+  server_id: 13682
+  minute:
+    - 0
+    - 30
+  monitored_conditions:
+    - download
+    - upload
+    - ping
+
+- platform: systemmonitor
+  resources:
+    - type: processor_use
+    - type: disk_use_percent
+      arg: /
+    - type: memory_use_percent
+    - type: since_last_boot
 
 - platform: template
   sensors:
@@ -116,24 +166,6 @@
       unit_of_measurement: '%'
       entity_id: zwave.vision_zg8101_garage_door_detector
 
-- platform: systemmonitor
-  resources:
-    - type: processor_use
-    - type: disk_use_percent
-      arg: /
-    - type: memory_use_percent
-    - type: since_last_boot
-
-- platform: speedtest
-  server_id: 13682
-  minute:
-    - 0
-    - 30
-  monitored_conditions:
-    - download
-    - upload
-    - ping
-
 - platform: template
   sensors:
     since_last_boot_templated:
@@ -155,35 +187,6 @@
             {{ hours }} hours
           {%- endif -%}
         {%- endif -%}
-
-- platform: rest
-  resource: https://api.ipify.org/?format=json
-  name: External IP
-  value_template: '{{ value_json.ip }}'
-
-- platform: google_travel_time
-  api_key: !secret google_travel_time_api_key
-  name: Brian - Home
-  origin: device_tracker.brian_v30
-  destination: !secret home
-
-# - platform: google_travel_time
-#   api_key: !secret google_travel_time_api_key
-#   name: Brian - Work
-#   origin: device_tracker.brian_v30
-#   destination: !secret brian_work
-
-- platform: google_travel_time
-  api_key: !secret google_travel_time_api_key
-  name: Jennifer - Home
-  origin: device_tracker.jennifer_stylo3plus
-  destination: !secret home
-
-# - platform: google_travel_time
-#   api_key: !secret google_travel_time_api_key
-#   name: Jennifer - Work
-#   origin: device_tracker.jennifer_stylo3plus
-#   destination: !secret jennifer_work
 
 - platform: template
   sensors:
@@ -222,6 +225,3 @@
 
 - platform: version
   name: HASS Current Version
-
-- platform: cert_expiry
-  host: !secret cert_expiry_host

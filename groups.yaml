@@ -1,3 +1,5 @@
+### Views ###
+
 Default_view:
  name: Home
  icon: mdi:home-assistant
@@ -63,8 +65,16 @@ auto:
  view: yes
  entities:
    - group.announcements
-   - group.notifications
    - group.automations
+   - group.notifications
+
+### Groups ###
+
+Presence:
+   - device_tracker.brian_v30
+   - sensor.battery_brian_v30
+   - device_tracker.jennifer_stylo3plus
+   - sensor.battery_jennifer_stylo3plus
 
 Living Room:
   - light.living_room
@@ -88,28 +98,24 @@ Switches:
   - switch.fan
   - script.thermostatfan
 
-Presence:
-   - device_tracker.brian_v30
-   - sensor.battery_brian_v30
-   - device_tracker.jennifer_stylo3plus
-   - sensor.battery_jennifer_stylo3plus
-
 Garage:
   - cover.garagedoor
   - sensor.garage_door_battery
+
+Travel Time:
+  - sensor.brian__home
+  - sensor.brian__work
+  - sensor.jennifer__home
+  - sensor.jennifer__work
 
 Cams:
   - camera.living_room
   - camera.garage
 
-Climate:
-  - climate.thermostat
-  - sensor.thermostat_temperature
-  - sensor.thermostat_humidity
-  - sensor.kitchen_temperature
-  - binary_sensor.thermostat_occupancy
-  - binary_sensor.kitchen_occupancy
-  - history_graph.temperature
+Media:
+  - media_player.roku_yn00ud954225
+  - media_player.living_room
+  - media_player.roku_yu005y230901
 
 Weather:
   - sensor.dark_sky_temperature
@@ -124,6 +130,15 @@ Allergy Index:
   - sensor.forecasted_allergy_index
   - sensor.allergy_index_today
   - sensor.allergy_index_tomorrow
+
+Climate:
+  - climate.thermostat
+  - sensor.thermostat_temperature
+  - sensor.thermostat_humidity
+  - sensor.kitchen_temperature
+  - binary_sensor.thermostat_occupancy
+  - binary_sensor.kitchen_occupancy
+  - history_graph.temperature
 
 System:
   - sensor.hass_current_version
@@ -143,12 +158,6 @@ Devices:
   - sensor.alberts_phone
   - sensor.elenas_phone
 
-Travel Time:
-  - sensor.brian__home
-  - sensor.brian__work
-  - sensor.jennifer__home
-  - sensor.jennifer__work
-
 Connection:
   - sensor.speedtest_download
   - sensor.speedtest_upload
@@ -159,21 +168,10 @@ Connection:
 Batteries:
   - sensor.garage_door_battery
 
-Media:
-  - media_player.roku_yn00ud954225
-  - media_player.living_room
-  - media_player.roku_yu005y230901
-
 Announcements:
   - automation.announce_when_garage_door_is_opened
   - automation.announce_when_garage_door_is_closed
   - automation.announce_when_jennifer_comes_home
-
-Notifications:
-  - automation.restart_notification_via_html5
-  - automation.update_available_notification_via_html5
-  - automation.failed_login_attempt_notification
-  - automation.brians_meds_reminder
 
 Automations:
   - automation.daily_backups
@@ -182,3 +180,9 @@ Automations:
   - automation.turn_on_front_porch_light_at_dusk
   - automation.turn_on_desk_light_when_brian_gets_home
   - automation.turn_off_desk_light_when_brian_leaves
+
+Notifications:
+  - automation.restart_notification_via_html5
+  - automation.update_available_notification_via_html5
+  - automation.failed_login_attempt_notification
+  - automation.brians_meds_reminder

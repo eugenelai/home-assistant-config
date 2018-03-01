@@ -1,5 +1,7 @@
 - platform: owntracks_http
+
 #- platform: bluetooth_tracker
+
 - platform: ping
   hosts:
     amplifi: 192.168.0.1

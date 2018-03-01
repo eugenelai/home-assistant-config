@@ -1,10 +1,3 @@
-- name: twitter
-  platform: twitter
-  consumer_key: !secret consumer_key
-  consumer_secret: !secret consumer_secret
-  access_token: !secret access_token
-  access_token_secret: !secret access_token_secret
-
 - name: html5
   platform: html5
   gcm_api_key: !secret gcm_api_key
@@ -18,3 +11,10 @@
   platform: slack
   api_key: !secret slack_api_key
   default_channel: '#hass'
+
+- name: twitter
+  platform: twitter
+  consumer_key: !secret consumer_key
+  consumer_secret: !secret consumer_secret
+  access_token: !secret access_token
+  access_token_secret: !secret access_token_secret

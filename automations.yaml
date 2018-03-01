@@ -1,28 +1,34 @@
-- id: porch_light_on
-  alias: Turn on front porch light at dusk
+- id: brians_meds_reminder
+  alias: Brian's meds reminder
   trigger:
-  - platform: sun
-    event: sunset
-    offset: -00:15:00
+  - platform: time
+    at: "20:00:00"
   action:
-  - service: homeassistant.turn_on
-    entity_id: light.front_porch
-  - service: notify.html5
+  - service: light.turn_on
+    entity_id: light.desk
     data:
-      message: "Porch light turned on"
+      flash: long
 
-- id: porch_light_off
-  alias: Turn off front porch light at dawn
+# - id: clear_tts
+#   alias: Clear TTS cache
+#   trigger:
+#     platform: time
+#     hours: '/24'
+#   condition:
+#     - condition: time
+#       weekday:
+#         - mon
+#   action:
+#     service: tts.clear_cache
+
+- id: daily_backups
+  alias: Daily backups
   trigger:
-  - platform: sun
-    event: sunrise
-    offset: +00:15:00
+  - platform: time
+    at: "05:00:00"
   action:
-  - service: homeassistant.turn_off
-    entity_id: light.front_porch
-  - service: notify.html5
-    data:
-      message: "Porch light turned off"
+  - service: hassio.addon_stdin
+    data: {"addon":"7be23ff5_dropbox_sync","input":{"command":"upload"}}
 
 - id: desk_on
   alias: Turn on desk light when Brian gets home
@@ -33,6 +39,8 @@
     to: home
   action:
   - service: homeassistant.turn_on
+    data:
+      brightness_pct: 33
     entity_id: light.desk
   # - service: notify.html5
   #   data:
@@ -52,6 +60,54 @@
   #   data:
   #     message: "Desk light turned off"
 
+- id: failed_login_notification
+  alias: Failed login attempt notification
+  trigger:
+    - platform: state
+      entity_id: persistent_notification.httplogin
+  condition:
+    - condition: template
+      value_template: "{{ trigger.to_state.state != 'None' }}"
+  action:
+    - service: notify.home_assistant
+      data_template:
+        title: "{{ states.persistent_notification.httplogin.attributes.message }}"
+        message: 'url: https://whatismyipaddress.com/ip/{{ states.persistent_notification.httplogin.attributes.message.split ("from ") [1]}}'
+
+- id: garage_door_closed
+  alias: Announce when garage door is closed
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.garage_door
+    from: "on"
+    to: "off"
+  action:
+  - service: tts.google_say
+    data:
+      entity_id: media_player.living_room_home
+      message: "garage door closed"
+
+- id: garage_door_open
+  alias: Announce when garage door is opened
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.garage_door
+    from: "off"
+    to: "on"
+  action:
+  - service: tts.google_say
+    data:
+      entity_id: media_player.living_room_home
+      message: "garage door opened"
+
+- id: heal_network
+  alias: Heal Network
+  trigger:
+    platform: time
+    at: '05:00:00'
+  action:
+    - service: zwave.heal_network
+
 - id: jennifer_home
   alias: Announce when Jennifer comes home
   trigger:
@@ -61,11 +117,48 @@
     to: home
   action:
   - service: tts.google_say
-    entity_id:
-      - media_player.living_room_home
-      - media_player.kitchen_mini
+    entity_id: media_player.living_room_home
     data:
       message: "Jennifer is home"
+
+- id: porch_light_off
+  alias: Turn off front porch light at dawn
+  trigger:
+  - platform: sun
+    event: sunrise
+    offset: +00:10:00
+  action:
+  - service: homeassistant.turn_off
+    entity_id: light.front_porch
+  - service: notify.html5
+    data:
+      message: "Porch light turned off"
+
+- id: porch_light_on
+  alias: Turn on front porch light at dusk
+  trigger:
+  - platform: sun
+    event: sunset
+    offset: -00:10:00
+  action:
+  - service: homeassistant.turn_on
+    data:
+      brightness_pct: 100
+    entity_id: light.front_porch
+  - service: notify.html5
+    data:
+      message: "Porch light turned on"
+
+- id: restart_dasshio
+  alias: Restart Dasshio hourly
+  trigger:
+    - platform: time
+      minutes: 00
+      seconds: 00
+  action:
+    - service: hassio.addon_restart
+      data:
+        addon: 03d23610_dasshio
 
 - id: restart_notification
   alias: Restart notification via HTML5
@@ -86,99 +179,3 @@
   - service: notify.html5
     data:
       message: 'Update for Home Assistant is available.'
-
-- id: failed_login_notification
-  alias: Failed login attempt notification
-  trigger:
-    - platform: state
-      entity_id: persistent_notification.httplogin
-  condition:
-    - condition: template
-      value_template: "{{ trigger.to_state.state != 'None' }}"
-  action:
-    - service: notify.home_assistant
-      data_template:
-        title: "{{ states.persistent_notification.httplogin.attributes.message }}"
-        message: 'url: https://whatismyipaddress.com/ip/{{ states.persistent_notification.httplogin.attributes.message.split ("from ") [1]}}'
-
-- id: clear_tts
-  alias: Clear TTS cache
-  trigger:
-    platform: time
-    hours: '/24'
-  condition:
-    - condition: time
-      weekday:
-        - mon
-  action:
-    service: tts.clear_cache
-
-- id: heal_network
-  alias: Heal Network
-  trigger:
-    platform: time
-    at: '05:00:00'
-  action:
-    - service: zwave.heal_network
-
-- id: garage_door_open
-  alias: Announce when garage door is opened
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.garage_door
-    from: "off"
-    to: "on"
-  action:
-  - service: tts.google_say
-    data:
-      entity_id:
-      - media_player.living_room_home
-      - media_player.kitchen_mini
-      message: "garage door opened"
-
-- id: garage_door_closed
-  alias: Announce when garage door is closed
-  trigger:
-  - platform: state
-    entity_id: binary_sensor.garage_door
-    from: "on"
-    to: "off"
-  action:
-  - service: tts.google_say
-    data:
-      entity_id:
-        - media_player.living_room_home
-        - media_player.kitchen_mini
-      message: "garage door closed"
-
-- id: brians_meds_reminder
-  alias: Brian's meds reminder
-  trigger:
-  - platform: time
-    at: "20:00:00"
-  action:
-  - service: light.turn_on
-    entity_id: light.desk
-    data:
-      flash: long
-
-- id: daily_backups
-  alias: Daily backups
-  trigger:
-  - platform: time
-    at: "05:00:00"
-  action:
-  - service: hassio.addon_stdin
-    data:
-      {"addon":"7be23ff5_dropbox_sync","input":{"command":"upload"}}
-
-- id: restart_dasshio
-  alias: Restart Dasshio hourly
-  trigger:
-    - platform: time
-      minutes: 00
-      seconds: 00
-  action:
-    - service: hassio.addon_restart
-      data:
-        addon: 03d23610_dasshio

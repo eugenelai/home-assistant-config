@@ -58,3 +58,42 @@ sensor.vision_zg8101_garage_door_detector_sourcenodeid:
 sensor.vision_zg8101_garage_door_detector_burglar:
   platform: zwave
   unique_id: 5-72057594127859873
+sensor.allergy_index_forecasted_average:
+  platform: pollen
+  unique_id: 76016_allergy_index_forecasted_average
+sensor.allergy_index_tomorrow_2:
+  platform: pollen
+  unique_id: 76016_allergy_index_tomorrow
+sensor.allergy_index_today_2:
+  platform: pollen
+  unique_id: 76016_allergy_index_today
+media_player.living_room:
+  platform: cast
+  unique_id: 92a116c8-a177-71d0-f215-eebf5fd0343e
+media_player.master_bedroom_mini:
+  platform: cast
+  unique_id: 0b7fa253-1074-a58c-fd12-2d38b1f05d46
+media_player.whole_house:
+  platform: cast
+  unique_id: 9335e5dc-035b-4f68-b4c3-3ac09730e350
+media_player.kitchen_mini:
+  platform: cast
+  unique_id: a7596021-fafe-1ab0-412b-ab7a3e50d40a
+media_player.living_room_home:
+  platform: cast
+  unique_id: 3a103596-f46a-c9cc-eb06-62d59d6bde05
+media_player.home_group:
+  platform: cast
+  unique_id: 588b74bf-9da0-4c3a-bc18-f539f91bc76e
+media_player.cowboys_room_mini:
+  platform: cast
+  unique_id: 3a5f6391-393d-e27c-146a-7be9cb238a34
+media_player.elenas_mini:
+  platform: cast
+  unique_id: 36683b15-114c-dd00-f71b-70f7de9c9a3e
+media_player.my_room_tv:
+  platform: cast
+  unique_id: 8e90fe20-ed5d-381b-9001-2cf6f8c5c43c
+media_player.albert_and_nicks_room:
+  platform: cast
+  unique_id: 088abbe3-d159-5e23-bf3c-a8125f3e56c2
