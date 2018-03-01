@@ -20,4 +20,11 @@
   [Ecobee 3](https://www.ecobee.com/)  
   [Owntracks](http://owntracks.org/) + [ibeacon](https://www.amazon.com/gp/product/B019G0VVZC/ref=oh_aui_detailpage_o03_s00?ie=UTF8&psc=1) for presence detection.  
   [Wansview IP Camera](https://www.amazon.com/gp/product/B077ZSPD26/ref=oh_aui_detailpage_o04_s00?ie=UTF8&psc=1)  
-  [IP Webcam](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en) running on an old Android phone for a quick and dirty IP camera.
+  [IP Webcam](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en) running on an old Android phone for a quick and dirty IP camera.  
+    
+    
+![home](https://github.com/ikonixx/home-assistant-config/blob/master/images/home.png)  
+![weather](https://github.com/ikonixx/home-assistant-config/blob/master/images/weather.png)  
+![ac](https://github.com/ikonixx/home-assistant-config/blob/master/images/ac.png)  
+![status](https://github.com/ikonixx/home-assistant-config/blob/master/images/status.png)  
+![automations](https://github.com/ikonixx/home-assistant-config/blob/master/images/auto.png)  
