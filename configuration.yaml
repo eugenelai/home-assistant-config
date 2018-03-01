@@ -30,8 +30,8 @@ map:
 http:
   # Uncomment this to add a password (recommended!)
   api_password: !secret api_password
-  #ssl_certificate: /ssl/fullchain.pem
-  #ssl_key: /ssl/privkey.pem
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
   # Uncomment this if you are using SSL or running in Docker etc
   base_url: !secret base_url
   ip_ban_enabled: True
