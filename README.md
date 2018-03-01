@@ -1,7 +1,7 @@
 ![Home Assistant](https://github.com/ikonixx/home-assistant-config/blob/master/images/hass.png)
 # Home Assistant
 
-My [Home Assistant](https://home-assistant.io/) configuration running on a Raspberry Pi 3 with the following addons and devices.
+![travis](https://travis-ci.org/ikonixx/home-assistant-config.svg?branch=master) My [Home Assistant](https://home-assistant.io/) configuration running on a Raspberry Pi 3 with the following addons and devices.
 
 #### Addons:
   [HASS Configurator](https://github.com/danielperna84/hass-configurator)  
