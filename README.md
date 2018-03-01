@@ -8,7 +8,7 @@
   [Dasshio](https://github.com/danimtb/dasshio)  
   [DuckDNS](https://github.com/home-assistant/hassio-addons)  
   [MariaDB](https://github.com/home-assistant/hassio-addons)  
-  [Samba Share](https://github.com/home-assistant/hassio-addons)
+  [Samba Share](https://github.com/home-assistant/hassio-addons)  
   [SSH Server](https://github.com/home-assistant/hassio-addons)  
   [Terminal](https://github.com/home-assistant/hassio-addons)
   
