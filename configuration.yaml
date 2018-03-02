@@ -58,8 +58,6 @@ history: !include history.yaml
 # View all events in a logbook
 logbook: !include logbook.yaml
 
-recorder: !include recorder.yaml
-
 # Track the sun
 sun:
 
@@ -93,6 +91,7 @@ device_tracker: !include device_trackers.yaml
 group: !include groups.yaml
 history_graph: !include graphs.yaml
 notify: !include notify.yaml
+recorder: !include recorder.yaml
 script: !include scripts.yaml
 sensor: !include sensors.yaml
 switch: !include switches.yaml
