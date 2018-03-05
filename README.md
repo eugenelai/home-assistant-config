@@ -8,7 +8,7 @@ My [Home Assistant](https://home-assistant.io/) configuration running on a Raspb
   [Configurator](https://github.com/danielperna84/hass-configurator)  
   [Dasshio](https://github.com/danimtb/dasshio)  
   [DuckDNS](https://github.com/home-assistant/hassio-addons)  
-  [MariaDB](https://github.com/home-assistant/hassio-addons)  
+  ~~[MariaDB](https://github.com/home-assistant/hassio-addons)~~  - Now using Google Cloud SQL to save reading/writing to my sd card constantly.  
   [Samba Share](https://github.com/home-assistant/hassio-addons)  
   [SSH Server](https://github.com/home-assistant/hassio-addons)  
   [Terminal](https://github.com/home-assistant/hassio-addons)
