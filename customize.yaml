@@ -140,7 +140,7 @@ sensor.since_last_boot_templated:
   icon: mdi:timer
   friendly_name: Since System Reboot
 
-sensor.uptime.templated:
+sensor.uptime_templated:
   icon: mdi:timer
   friendly_name: Since HASS Restart
 
