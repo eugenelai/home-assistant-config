@@ -58,6 +58,10 @@ sensor.elenas_phone:
   icon: mdi:cellphone
   friendly_name: Elena's Phone
 
+sensor.kings_phone:
+  icon: mdi:cellphone
+  friendly_name: King's Phone
+
 sensor.hass_current_version:
   icon: mdi:home-assistant
 

@@ -157,6 +157,7 @@ Devices:
   - sensor.nicks_phone
   - sensor.alberts_phone
   - sensor.elenas_phone
+  - sensor.kings_phone
 
 Connection:
   - sensor.speedtest_download
