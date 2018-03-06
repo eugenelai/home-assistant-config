@@ -100,7 +100,6 @@ Switches:
 
 Garage:
   - cover.garagedoor
-  - sensor.garage_door_battery
 
 Travel Time:
   - sensor.brian__home
@@ -110,6 +109,7 @@ Travel Time:
 
 Cams:
   - camera.living_room
+  - camera.front_yard
   - camera.garage
 
 Media:
@@ -146,6 +146,7 @@ System:
   - sensor.memory_use_percent
   - sensor.disk_use_percent_
   - sensor.since_last_boot_templated
+  - sensor.uptime_templated
   - sensor.ssl_certificate_expiry
 
 Devices:

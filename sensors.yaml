@@ -190,6 +190,46 @@
 
 - platform: template
   sensors:
+    uptime_templated:
+      value_template: >-
+         {% set uptime = states.sensor.uptime.state | int %}
+         {% set minutes = ((uptime % 60) / 1) | int %}
+         {% set hours = ((uptime % 1440) / 60) | int %}
+         {% set days = (uptime /1440) | int %}
+         {%- if uptime < 1 -%}
+           Less than a minute
+         {%- else -%}
+           {%- if days > 0 -%}
+             {%- if days == 1 -%}
+               1 day
+             {%- else -%}
+               {{ days }} days
+             {%- endif -%}
+           {%- endif -%}
+           {%- if hours > 0 -%}
+             {%- if days > 0 -%}
+               {{ ', ' }}
+             {%- endif -%}
+             {%- if hours == 1 -%}
+               1 hour
+             {%- else -%}
+               {{ hours }} hours
+             {%- endif -%}
+           {%- endif -%}
+           {%- if minutes > 0 -%}
+             {%- if days > 0 or hours > 0 -%}
+               {{ ', ' }}
+             {%- endif -%}
+             {%- if minutes == 1 -%}
+               1 minute
+             {%- else -%}
+               {{ minutes }} minutes
+             {%- endif -%}
+           {%- endif -%}
+         {%- endif -%}
+
+- platform: template
+  sensors:
     amplifi:
       value_template: "{% if is_state('device_tracker.amplifi', 'home') %}Online{% else %}Offline{% endif %}"
 
@@ -222,6 +262,10 @@
   sensors:
     elenas_phone:
       value_template: "{% if is_state('device_tracker.elenas_phone', 'home') %}Online{% else %}Offline{% endif %}"
+
+- platform: uptime
+  name: Uptime
+  unit_of_measurement: minutes
 
 - platform: version
   name: HASS Current Version

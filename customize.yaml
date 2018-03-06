@@ -138,7 +138,11 @@ sensor.thermostat_humidity:
 
 sensor.since_last_boot_templated:
   icon: mdi:timer
-  friendly_name: Uptime
+  friendly_name: Since System Reboot
+
+sensor.uptime.templated:
+  icon: mdi:timer
+  friendly_name: Since HASS Restart
 
 media_player.living_room:
   friendly_name: Living Room Chromecast

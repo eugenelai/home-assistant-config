@@ -7,11 +7,6 @@
   platform: pushbullet
   api_key: !secret pushbullet_api_key
 
-- name: slack
-  platform: slack
-  api_key: !secret slack_api_key
-  default_channel: '#hass'
-
 - name: twitter
   platform: twitter
   consumer_key: !secret consumer_key

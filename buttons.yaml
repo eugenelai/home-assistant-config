@@ -1,4 +1,5 @@
 {
+  "timeout": 5,
   "buttons": [
     {
       "name": "ON - Bedroom",

@@ -43,21 +43,6 @@ light.front_porch_2:
 light.mantle_2:
   platform: hue
   unique_id: 00:17:88:01:02:af:91:7b-0b
-binary_sensor.garage_door:
-  platform: zwave
-  unique_id: 5-72057594126794752
-sensor.alarm_type:
-  platform: zwave
-  unique_id: 5-72057594127859713
-sensor.alarm_level:
-  platform: zwave
-  unique_id: 5-72057594127859729
-sensor.vision_zg8101_garage_door_detector_sourcenodeid:
-  platform: zwave
-  unique_id: 5-72057594127859745
-sensor.vision_zg8101_garage_door_detector_burglar:
-  platform: zwave
-  unique_id: 5-72057594127859873
 sensor.allergy_index_forecasted_average:
   platform: pollen
   unique_id: 76016_allergy_index_forecasted_average
@@ -97,3 +82,18 @@ media_player.my_room_tv:
 media_player.albert_and_nicks_room:
   platform: cast
   unique_id: 088abbe3-d159-5e23-bf3c-a8125f3e56c2
+binary_sensor.garage_door:
+  platform: zwave
+  unique_id: 7-72057594160349184
+sensor.alarm_type_3:
+  platform: zwave
+  unique_id: 7-72057594161414145
+sensor.alarm_level_3:
+  platform: zwave
+  unique_id: 7-72057594161414161
+sensor.vision_zg8101_garage_door_detector_sourcenodeid_3:
+  platform: zwave
+  unique_id: 7-72057594161414177
+sensor.vision_zg8101_garage_door_detector_burglar_3:
+  platform: zwave
+  unique_id: 7-72057594161414305

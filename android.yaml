@@ -1,0 +1,7 @@
+- host: 192.168.0.6
+  name: Garage
+  scan_interval: 5
+
+# - host: 192.168.0.7
+#   name: Front Yard
+#   scan_interval: 5

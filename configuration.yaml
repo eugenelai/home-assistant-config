@@ -78,12 +78,8 @@ hue:
   bridges:
     - host: 192.168.0.2
 
-android_ip_webcam:
-  - host: 192.168.0.6
-    name: Garage
-    scan_interval: 5
-
 alert: !include alerts.yaml
+android_ip_webcam: !include android.yaml
 automation: !include automations.yaml
 camera: !include cameras.yaml
 cover: !include cover.yaml
